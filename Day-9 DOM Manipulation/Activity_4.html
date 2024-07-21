@@ -1,0 +1,47 @@
+<!--
+  Activity 5: Event Handling :-
+      Task 7: Select an HTML element and change one of its attributes (e.g.,'src' of an 'img' tag).
+      Task 8: Add and remove a CSS class to/from an HTML element.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 5</title>
+  <style>
+    .h1_attr {
+      background-color: rgb(0, 255, 38);
+    }
+    .h1_attr_new {
+      color: blue;
+      background-color: burlywood;
+    }
+
+    .h1_1 {
+      background-color: rgb(0, 185, 185);
+    }
+    .h1_2 {
+      color: blueviolet;
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="h1_attr" id="h1_id">This h1 id attributes has to change</h1>
+  <br>
+  <h1 id="h1_add">This is to add Class</h1>
+  <h1 class="h1_2" id="h1_remove">This is to remove Class</h1>
+</body>
+<script>
+  const h1 = document.getElementById('h1_id'); //Select an HTML element
+  h1.setAttribute('class','h1_attr_new'); //change one of its attributes
+
+  const h1_add = document.getElementById('h1_add');
+  h1_add.setAttribute('class','h1_1'); //adding a css class to an HTML element
+
+  const h1_remove = document.getElementById('h1_remove');
+  h1_remove.removeAttribute('class'); //removing a css class from an HTML element
+</script>
+</html>

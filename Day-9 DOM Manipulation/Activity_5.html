@@ -1,0 +1,32 @@
+<!--
+  Activity 5: Enhanced Object Literals :-
+      Task 9: Add a click event listener to a button that changes the text content of a paragraph.
+      Task 10: Add a mouseover event listener to an element that changes its border color.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 5</title>
+</head>
+<body>
+  <p id="para_id">Hello</p>
+  <button id="btn">clich to change heading</button>
+  <br><br><br>
+  <div id="div_id" style="border: 4px solid red;">this is a div to mouseover</div>
+</body>
+<script>
+  const para = document.getElementById('para_id');
+  const button = document.getElementById('btn');
+  button.addEventListener('click', (event)=> { //Adding a click event listener to the button
+    para.innerHTML = "Hello GoHANN15"; //changes the text content of the paragraph
+  });
+
+  const div = document.getElementById('div_id');
+  div.addEventListener('mouseover',()=> { ////Adding a mouseover event listener to the div element
+    div.style.borderColor = "blue"; //changes the div border color
+  })
+</script>
+</html>

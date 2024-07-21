@@ -1,0 +1,31 @@
+<!--
+  Activity 3: Removing Elements :-
+      Task 5: Select an HTML element and remove it from the DOM.
+      Task 6: Remove the last child of a specific HTML element.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 3</title>
+</head>
+<body>
+  <h1 id="heading">This is heading</h1>
+  <div id="div" style="background-color: aqua;">
+    <h2 class="h2_class">Element 1</h2>
+    <h2 class="h2_class">Element 2</h2>
+    <h2 class="h2_class">Element 3</h2>
+    <h2 class="h2_class">Element 4</h2>
+  </div>
+</body>
+<script>
+  const body = document.body;
+  const heading = document.getElementById('heading'); //Select an HTML element
+  body.removeChild(heading); //remove it from the DOM
+
+  const div = document.getElementById('div'); //a specific HTML element
+  div.removeChild(div.lastElementChild); //Remove the last child
+</script>
+</html>

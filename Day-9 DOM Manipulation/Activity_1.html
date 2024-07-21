@@ -1,0 +1,25 @@
+<!--
+  Activity 1: Selecting and Manipulating Elements :-
+      Task 1: Select an HTML element by its ID and change its text content.
+      Task 2: Select an HTML element by its class and change its background color.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 1</title>
+</head>
+<body>
+  <h2>Name:</h2>
+    <h1 id="h1_id">Dipankar Ganguly</h1>
+    <br>
+    <h2>Name:</h2>
+    <h1 class="h1_class">Dipankar Ganguly</h1>
+</body>
+<script>
+  document.getElementById('h1_id').innerHTML = "Gohan"; //change its text
+  document.getElementsByClassName('h1_class')[0].style.backgroundColor = "yellow"; //change its background color
+</script>
+</html>
