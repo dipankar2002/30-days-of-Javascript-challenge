@@ -1,0 +1,37 @@
+<!--
+  Activity 1: Basic Event Handling :-
+      Task 1: Add a click event listener to a button that changes the text content of a paragraph.
+      Task 2: Add a double-click event listener to an image that toggles its visibility.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 1</title>
+</head>
+<style>
+  .img_vis {
+    opacity: 20%;
+  }
+</style>
+<body>
+  <p id="para_id">Hello</p>
+  <button id="btn">clich to change heading</button>
+  <br><br><br>
+  <img id="img_id" src="peakpx (11).jpg" alt="" width="150px">
+</body>
+<script>
+  const para = document.getElementById('para_id');
+  const button = document.getElementById('btn');
+  button.addEventListener('click', (event)=> { //Adding a click event listener to the button
+    para.innerHTML = "Hello GoHANN15"; //changes the text content of the paragraph
+  });
+
+  const img = document.getElementById('img_id');
+  img.addEventListener('dblclick',()=> { //Adding a double-click event listener to an image
+    img.classList.toggle('img_vis') //toggles the visibility of the image
+  })
+</script>
+</html>

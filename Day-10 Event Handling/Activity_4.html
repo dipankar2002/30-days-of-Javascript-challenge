@@ -1,0 +1,51 @@
+<!--
+  Activity 4: Form Events :-
+      Task 7: Add a submit event listener to a form that prevents the default submission and logs the form data to the console.
+      Task 8: Add a change event listener to a select dropdown that displays the selected value in a paragraph.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 4</title>
+</head>
+<body>
+  <form id="myForm">
+    <label for="name_input">Name</label>
+    <input type="text" id="name_input" name="name">
+    <label for="email_input">Email</label>
+    <input type="email" id="email_input" name="email">
+    <label for="pass_input">Password</label>
+    <input type="password" id="pass_input" name="password">
+    <button type="submit">Submit</button>
+  </form>
+  <br><br><br><br>
+  <p id="selectedValue">Selected value will appear here.</p>
+  <label for="dropdown">Choose an option:</label>
+    <select id="dropdown">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
+</body>
+<script>
+  document.getElementById('myForm').addEventListener('submit', function(event) { //Adding a submit event listener to the form
+    event.preventDefault(); // Prevent the default form submission
+
+    const formData = new FormData(this);
+
+    for (const [name, value] of formData) {
+      console.log(`${name}: ${value}`); //logs the form data to the console
+    }
+
+  });
+  const dropdown = document.getElementById('dropdown');
+  const displayParagraph = document.getElementById('selectedValue');
+
+  dropdown.addEventListener('change', function() { //Adding a change event listener to a select dropdown
+  displayParagraph.textContent = `Selected value: ${dropdown.value}`; //displays the selected value in a paragraph
+  });
+</script>
+</html>

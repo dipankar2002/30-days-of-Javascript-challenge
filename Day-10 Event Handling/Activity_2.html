@@ -1,0 +1,27 @@
+<!--
+  Activity 2: Mouse Events :-
+      Task 3: Add a mouseover event listener to an element that changes its background color.
+      Task 4: Add a mouseout event listener to an element that resets its background color.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 2</title>
+</head>
+<body>
+  <div id="div_id" style="border: 4px solid red;">this is a div</div>
+</body>
+<script>
+  const div = document.getElementById('div_id');
+  div.addEventListener('mouseover',()=> { //Adding a mouseover event listener to the div element
+    div.style.borderColor = "blue"; //changes the div border color
+  })
+
+  div.addEventListener('mouseout',()=> { //Adding a mouseuot event listener to the div element
+    div.style.borderColor = "red"; //reset the div border color
+  })
+</script>
+</html>
